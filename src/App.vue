@@ -4,6 +4,10 @@
 </template>
 
 <script>
+import {
+    provide,
+    inject
+} from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
@@ -15,6 +19,9 @@ export default {
         return {
             msg: 'first time use this !'
         }
+    },
+    setup() {
+        provide('ThemeSymbol', 'light')
     }
 }
 </script>
